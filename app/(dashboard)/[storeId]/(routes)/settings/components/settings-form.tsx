@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/form";
 import { Separator } from "@/components/ui/separator";
 import { Heading } from "@/components/ui/heading";
-// import { useOrigin } from "@/hooks/use-origin";
+import { useOrigin } from "@/hooks/use-origin";
 import { AlertModal } from "@/components/modals/alert-modal";
 import { ApiAlert } from "@/components/ui/api-alert";
 
@@ -39,7 +39,7 @@ interface SettingsFormProps {
 export const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
   const params = useParams();
   const router = useRouter();
-  //   const origin = useOrigin();
+  const origin = useOrigin();
 
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
